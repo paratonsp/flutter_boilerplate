@@ -34,6 +34,8 @@ flutter:
       # fonts:
         # - asset: assets/fonts/Lato-Regular.ttf
 
+
+# run this command to change icon
 # flutter pub run flutter_launcher_icons
 flutter_icons:
   android: "launcher_icon"

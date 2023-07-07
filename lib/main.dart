@@ -19,17 +19,19 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Resize(builder: () {
-      return MaterialApp(
-        useInheritedMediaQuery: true,
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
-        title: 'Flutter Boilerplate',
-        theme: FlexThemeData.light(scheme: FlexScheme.red),
-        darkTheme: FlexThemeData.dark(scheme: FlexScheme.red),
-        themeMode: ThemeMode.system,
-        home: Home(),
-      );
-    });
+    return Resize(
+      builder: () {
+        return MaterialApp(
+          useInheritedMediaQuery: true,
+          locale: DevicePreview.locale(context),
+          builder: DevicePreview.appBuilder,
+          title: 'Flutter Boilerplate',
+          theme: FlexThemeData.light(scheme: FlexScheme.red),
+          darkTheme: FlexThemeData.dark(scheme: FlexScheme.red),
+          themeMode: ThemeMode.system,
+          home: Home(),
+        );
+      },
+    );
   }
 }
