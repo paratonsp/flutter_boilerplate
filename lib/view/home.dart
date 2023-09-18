@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/view/auth/login.dart';
 import 'package:resize/resize.dart';
 import '../utils/widgets.dart';
 
@@ -15,14 +16,24 @@ class _HomeState extends State<Home> {
     return scaffoldHeader(
       context,
       Scaffold(
-        appBar: AppBar(
-          title: Text(
-            'Flutter Boilerplate',
-            style: TextStyle(fontSize: 1.5.rem),
+          body: Center(
+        child: TextButton(
+          autofocus: true,
+          clipBehavior: Clip.antiAlias,
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => Login(),
+              ),
+            );
+          },
+          child: Text(
+            'Next',
+            style: TextStyle(fontSize: 1.rem),
           ),
         ),
-        body: placeholder(context),
-      ),
+      )),
     );
   }
 }
